@@ -7,8 +7,11 @@ results.txt
 tax_audit_results.csv
 
 # Скриншоты и лог-файлы
-screenshots/
-scraper.log
+**/bin_list.txt
+**/screenshots/
+
 
 # Конфигурация и секреты
 .env
+**/bin_list.txt
+**/screenshots/
