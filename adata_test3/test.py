@@ -20,6 +20,10 @@ logging.basicConfig(level=logging.INFO, filename="tax_audit_scraper.log", format
 
 LOGIN = os.getenv("LOGIN")
 PASSWORD = os.getenv("PASSWORD")
+BIN_FILE = "bin_list.txt"
+OUTPUT_CSV = "results.csv"
+OUTPUT_TXT = "results.txt"
+SCREENSHOT_DIR = "screenshots"
 
 def init_driver():
     chrome_options = Options()

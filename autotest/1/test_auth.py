@@ -43,19 +43,19 @@ def save_screenshot(driver, test_name, filename):
     driver.save_screenshot(screenshot_path)
     logging.info(f"Saved screenshot for test {test_name}: {screenshot_path}")
 
-# def write_result(test_name, result):
-#     """Write test result to CSV and TXT."""
-#     file_exists = os.path.isfile(OUTPUT_CSV)
-#     with open(OUTPUT_CSV, "a", newline="", encoding='utf-8') as f:
-#         writer = csv.writer(f)
-#         if not file_exists:
-#             writer.writerow(["Тест", "Результат"])
-#         writer.writerow([test_name, result])
+def write_result(test_name, result):
+    """Write test result to CSV and TXT."""
+    file_exists = os.path.isfile(OUTPUT_CSV)
+    with open(OUTPUT_CSV, "a", newline="", encoding='utf-8') as f:
+        writer = csv.writer(f)
+        if not file_exists:
+            writer.writerow(["Тест", "Результат"])
+        writer.writerow([test_name, result])
     
-#     with open(OUTPUT_TXT, "a", encoding='utf-8') as f:
-#         f.write(f"Тест: {test_name}, Результат: {result}\n")
+    with open(OUTPUT_TXT, "a", encoding='utf-8') as f:
+        f.write(f"Тест: {test_name}, Результат: {result}\n")
     
-#     logging.info(f"Wrote result for test {test_name}: {result}")
+    logging.info(f"Wrote result for test {test_name}: {result}")
 
 def login(driver):
     """Perform login action."""
