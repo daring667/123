@@ -7,8 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 import time
 
 # Замените на свои данные
-LOGIN = "22773@adata.kz"
-PASSWORD = "Cntgfy555@"
+LOGIN = ""
+PASSWORD = ""
 
 # Файл со списком БИНов
 BIN_FILE = "bin_list.txt"
