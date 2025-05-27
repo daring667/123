@@ -14,8 +14,8 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename="tax_audit_scraper.log", format="%(asctime)s - %(levelname)s - %(message)s")
 
-LOGIN = "22773@adata.kz"
-PASSWORD = "Cntgfy555@"
+LOGIN = ""
+PASSWORD = ""
 BIN_FILE = "bin_list.txt"
 OUTPUT_CSV = "tax_audit_results.csv"
 OUTPUT_TXT = "tax_audit_results.txt"
