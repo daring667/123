@@ -6,9 +6,20 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-# Замените на свои данные
-LOGIN = ""
-PASSWORD = ""
+import time
+import csv
+import os
+import logging
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, filename="tax_audit_scraper.log", format="%(asctime)s - %(levelname)s - %(message)s")
+
+LOGIN = os.getenv("LOGIN")
+PASSWORD = os.getenv("PASSWORD")
 
 # Файл со списком БИНов
 BIN_FILE = "bin_list.txt"

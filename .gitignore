@@ -1,6 +1,14 @@
+# Логин и пароль хардкодить нельзя — нужно вынести в .env и тоже игнорировать
+
+# Файлы результатов
 bin_list.txt
 results.csv
 results.txt
+tax_audit_results.csv
+
+# Скриншоты и лог-файлы
 screenshots/
 scraper.log
-tax_audit_results.csv
+
+# Конфигурация и секреты
+.env

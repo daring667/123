@@ -10,13 +10,16 @@ import time
 import csv
 import os
 import logging
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, filename="auth_tests.log", format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.INFO, filename="tax_audit_scraper.log", format="%(asctime)s - %(levelname)s - %(message)s")
 
-# Constants
-LOGIN = "testuser@adata.kz"  # Замените на реальный логин
-PASSWORD = "TestPassword123"  # Замените на реальный пароль
+LOGIN = os.getenv("LOGIN")
+PASSWORD = os.getenv("PASSWORD")
 BASE_URL = "https://id.adata.kz/"  # URL сайта
 OUTPUT_CSV = "auth_results.csv"
 OUTPUT_TXT = "auth_results.txt"

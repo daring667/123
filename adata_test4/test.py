@@ -10,12 +10,16 @@ import time
 import csv
 import os
 import logging
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, filename="tax_audit_scraper.log", format="%(asctime)s - %(levelname)s - %(message)s")
 
-LOGIN = ""
-PASSWORD = ""
+LOGIN = os.getenv("LOGIN")
+PASSWORD = os.getenv("PASSWORD")
 BIN_FILE = "bin_list.txt"
 OUTPUT_CSV = "tax_audit_results.csv"
 OUTPUT_TXT = "tax_audit_results.txt"
